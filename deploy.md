@@ -1,8 +1,11 @@
 Deploy guide — Aditi-s-Personal-Website
 
 Prerequisites
-- Install nvm and set Node LTS: 
-  nvm install --lts && nvm use --lts
+- Install nvm and set Node 24:
+  nvm install 24 && nvm use 24
+
+# If you want to follow LTS instead, use:
+# nvm install --lts && nvm use --lts
 - Authenticate gh CLI: gh auth login
 
 Useful package.json scripts

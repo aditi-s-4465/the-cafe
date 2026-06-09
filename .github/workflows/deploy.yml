@@ -4,20 +4,35 @@ on:
   push:
     branches: [ main ]
 
+# Ensure the Actions runtime uses Node 24 for JavaScript actions to avoid deprecation warnings
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+permissions:
+  contents: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
 
-      - name: Use Node.js 20
+      - name: Use Node.js 24
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
 
       - name: Install dependencies
         run: npm ci
+
+      - name: Set Git user
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
       - name: Build (export)
         run: npm run build
@@ -31,4 +46,3 @@ jobs:
           publish_dir: ./out
           publish_branch: gh-pages
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          # Optional: configure user_name/user_email if desired
