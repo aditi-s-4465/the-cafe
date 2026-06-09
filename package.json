@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "build": "if [ -d site-src ]; then rm -rf out && mkdir -p out && cp -a site-src/. out/ && echo 'Copied site-src -> out'; else echo 'source dir site-src not found; nothing copied' && exit 1; fi",
     "start": "npx serve out",
     "lint": "eslint ."
   },

@@ -26,16 +26,33 @@ jobs:
         with:
           node-version: '24'
 
-      - name: Install dependencies
-        run: npm ci
+      - name: Install dependencies if present
+        run: |
+          if [ -f package.json ] && grep -q '"dependencies"\|"devDependencies"' package.json; then
+            echo "Dependencies detected — running npm ci"
+            npm ci
+          else
+            echo "No dependencies found in package.json — skipping npm ci"
+          fi
 
       - name: Set Git user
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-      - name: Build (export)
-        run: npm run build
+      - name: Build or copy site
+        run: |
+          echo "Attempting npm run build if present"
+          npm run build --if-present
+          if [ -d out ]; then
+            echo "out/ exists"
+          elif [ -d site-src ]; then
+            echo "site-src found, copying to out/"
+            rm -rf out && mkdir -p out && cp -a site-src/. out/
+            echo "Copied site-src -> out"
+          else
+            echo "No build output (out/) and no site-src. Nothing to publish."
+          fi
 
       - name: Ensure out/.nojekyll
         run: mkdir -p out && touch out/.nojekyll
