@@ -9,14 +9,14 @@
 }
 @font-face {
   font-family: 'pixel-sans';
-  src: url(/CyberpunkWaifus.ttf) format('truetype');
+  src: url('/the-cafe/CyberpunkWaifus.ttf') format('truetype');
 }
 @font-face {
   font-family: 'pixel-serif';
-  src: url(/calamity.ttf) format('truetype');
+  src: url('/the-cafe/calamity.ttf') format('truetype');
 }
 .full-container {
-  background-image: url('/rain.gif');
+  background-image: url('/the-cafe/rain.gif');
   background-repeat: repeat-x;     
   background-size: auto 110%;      
   background-position: center;    
@@ -28,7 +28,7 @@
   color: white;      
 }
 .brick-container {
-  background-image: url('/brick.png');
+  background-image: url('/the-cafe/brick.png');
   background-size: auto 120%;      
   width: 100vw;
   height: 100vh;                  
@@ -40,7 +40,7 @@
 }
 
 .pinboard-container {
-  background-image: url('/pinboard.png');
+  background-image: url('/the-cafe/pinboard.png');
   background-size: auto 100%;      
   width: 100%;
   height: 100%;                  
@@ -51,7 +51,7 @@
 }
 
 .beam-container {
-  background-image: url('/beam.png');
+  background-image: url('/the-cafe/beam.png');
   background-repeat: repeat-x;    
   background-size: auto 130%;     
   background-position: center;     
@@ -64,7 +64,7 @@
   flex-direction: column;
 }
 .window-container {
-  background-image: url('/windowframe.png');
+  background-image: url('/the-cafe/windowframe.png');
   background-repeat: repeat-x;     
   background-size: auto 120%;    
   background-position: center;     
