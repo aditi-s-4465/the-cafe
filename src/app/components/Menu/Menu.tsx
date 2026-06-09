@@ -18,14 +18,17 @@ function Menu() {
             </div>
             <div className='transparent-container'>
             {menuItems.map(([title, description, github, website], index) => (
-                            <div className="menu-item" key={index}>
-                            <h3 className="menu-title">{title}</h3>
-                            <p className="menu-description">{description}</p>
-                            <a className="menu-description" href={github}>{github}</a>
-                            <a className="menu-description" href={website}>{website}</a>
-                        </div>
-                        
-                        ))}
+              <div className="menu-item" key={index}>
+                <h3 className="menu-title">{title}</h3>
+                <p className="menu-description">{description}</p>
+                {github ? (
+                  <a className="menu-description" href={github} target="_blank" rel="noopener noreferrer">{github}</a>
+                ) : null}
+                {website ? (
+                  <a className="menu-description" href={website} target="_blank" rel="noopener noreferrer">{website}</a>
+                ) : null}
+              </div>
+            ))}
             </div>
         </div>
       </div>

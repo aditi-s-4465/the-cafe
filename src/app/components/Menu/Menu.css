@@ -26,19 +26,17 @@
     position: relative;
     border-radius: 8px;
     height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    place-items: center;
     text-align: center;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    grid-template-rows: auto auto auto;
-    display: grid;
+    box-shadow: none;
+    border: 1px solid rgba(62,39,35,0.2);
+    background-color: rgba(62,39,35,0.12);
+    padding: 12px;
 }
 
-.menu-item:hover {
-    transform: scale(1.05);
-}
 
 .menu-title {
     z-index: 1;
@@ -64,5 +62,6 @@
 }
 
 .menu-item:hover .menu-overlay {
-    opacity: 1;
+    /* disable overlay on hover to avoid pop-out effect */
+    opacity: 0;
 }
