@@ -21,7 +21,7 @@ function About({ refprops }: AboutProps) {
                 </div>
                 <div className='pixel-coffee-container'>
                   <div className='pixel-body'>
-                    Hi! My name is Aditi and I&apos;m currently a junior at the University of Illinois studying Computer Science & Anthropology with a minor in Game Studies and Design. I&apos;m passionate about the intersection of technology, creativity, humans and fun! I&apos;m currently exploring front-end development, HCI, UX Design, Game Development and working with people in any way. Feel free to check out the cafe or learn more about me ^-^
+                    Hi! My name is Aditi and I&apos;m currently an associate software engineer wokring on a Data Engineering team at Capital One! I recently graduated from the University of Illinois with a BS in Computer Science & Anthropology and a minor in Game Studies and Design. I&apos;m passionate about the intesection of humans, creativity and technology. I have prior experience in front-end and full-stack development, HCI and analog game development (board games and escape rooms). Feel free to check out the cafe or learn more about me ^-^
                   </div>
                 </div>
               </div>

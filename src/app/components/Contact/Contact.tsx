@@ -20,19 +20,13 @@ function Contact() {
                             </div>
                             </a>
   
-                            <a href="https://linkedin.com/in/aditishrivastavaatillinois" target="_blank" rel="noopener noreferrer">
+                            <a href="https://linkedin.com/in/aditi--shrivastava" target="_blank" rel="noopener noreferrer">
                             <div className='social-item'>
                                 <FaLinkedinIn/>
-                                <span className="pixel-body">https://linkedin.com/in/aditishrivastavaatillinois</span>
+                                <span className="pixel-body">https://linkedin.com/in/aditi--shrivastava</span>
                             </div>
                             </a>
 
-                            <a href="mailto:aditi12@illinois" className="social-link email-style">
-                                <div className="social-item">
-                                    <IoMail/>
-                                    <span className="pixel-body">aditi12[at]illinois.edu</span>
-                                </div>
-                            </a>
 
                             <a href="mailto:aditi.s.4465@illinois" className="social-link email-style">
                                 <div className="social-item">
