@@ -3,12 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "if [ -d site-src ]; then rm -rf out && mkdir -p out && cp -a site-src/. out/ && echo 'Copied site-src -> out'; else echo 'source dir site-src not found; nothing copied' && exit 1; fi",
+    "dev": "next dev",
+    "build": "next build",
     "start": "npx serve out",
     "lint": "eslint ."
   },
   "dependencies": {
     "@splidejs/splide": "^4.1.4",
+    "next": "^15.5.19",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "react-icons": "^5.6.0",
@@ -26,4 +28,3 @@
     "typescript": "^5"
   }
 }
-
