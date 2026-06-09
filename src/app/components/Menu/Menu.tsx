@@ -22,10 +22,10 @@ function Menu() {
                 <h3 className="menu-title">{title}</h3>
                 <p className="menu-description">{description}</p>
                 {github ? (
-                  <a className="menu-description" href={github} target="_blank" rel="noopener noreferrer"><b>{github}</b></a>
+                  <a className="menu-link" href={github} target="_blank" rel="noopener noreferrer"><b>{github}</b></a>
                 ) : null}
                 {website ? (
-                  <a className="menu-description" href={website} target="_blank" rel="noopener noreferrer"><b>{website}</b></a>
+                  <a className="menu-link" href={website} target="_blank" rel="noopener noreferrer"><b>{website}</b></a>
                 ) : null}
               </div>
             ))}

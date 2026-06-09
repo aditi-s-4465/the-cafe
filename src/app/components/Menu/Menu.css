@@ -65,3 +65,6 @@
     /* disable overlay on hover to avoid pop-out effect */
     opacity: 0;
 }
+.menu-link {
+    color: lightblue;
+}
