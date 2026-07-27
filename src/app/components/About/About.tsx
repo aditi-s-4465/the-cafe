@@ -25,7 +25,8 @@ function About({ refprops }: AboutProps) {
                   </div>
                 </div>
               </div>
-              <div className='image-container'></div>
+              <img src = "./aditi.png"></img>
+         
             </div>
           </div>
         </div>
